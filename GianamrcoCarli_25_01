@@ -1,0 +1,17 @@
+'''Scrivi un programma che chiede al cliente di scegliere da una lista di pietanze e calcola il conto'''
+lspietanze=["1. carbonara","2. lasagna","3. tortellini", "4. cacio e pepe"]
+lsprezzi=[7, 10, 8, 12]
+prezzo_totale=0 
+print("Ordina il menù immetti 0 quando hai finito")
+while True:
+    print ("scegli una delle seguenti pietanze ")
+    for i in range (0,len(lspietanze)):
+        print(lspietanze[i])
+    n=int(input("scegli una delle seguenti pietanze, inserendo il numero corrispondente: "))
+    if n==0:
+        break
+    prezzo_totale=prezzo_totale+lsprezzi[n-1]
+
+    print("Hai scelto", lspietanze[n-1])
+print("Il conto è", prezzo_totale)
+    
